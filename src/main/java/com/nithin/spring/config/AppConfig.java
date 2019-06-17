@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import static org.hibernate.cfg.Environment.*;
 
 @Configuration
-@PropertySource("classpath.db.properties")
+@PropertySource("classpath:db.properties")
 @EnableTransactionManagement
 @ComponentScans(value= {
 		@ComponentScan("com.nithin.spring.dao"),
