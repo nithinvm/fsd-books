@@ -21,7 +21,6 @@ public class BookController {
         System.out.println("The json value of book id ::::::::" + book);
         long id = bookService.save(book);
         return ResponseEntity.ok().body("New book has been saved with Id :" + id);
-
     }
 
     /*-- Get a book by id---*/
@@ -40,12 +39,10 @@ public class BookController {
 
 
     /*-- Update a book by id---*/
-
     @PutMapping("/book/{id}")
     public ResponseEntity<?> update(@PathVariable("id") long id, @RequestBody Book book) {
         bookService.update(id, book);
         return ResponseEntity.ok().body("Book has been updated successfully");
-
     }
 
     /*-- Delete a book by id---*/
